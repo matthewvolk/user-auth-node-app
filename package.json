@@ -1,0 +1,29 @@
+{
+  "name": "user-auth-node-app",
+  "version": "1.0.0",
+  "description": "user authentication app using node and mongodb",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "*",
+    "mongoose": "*",
+    "bcryptjs": "*",
+    "cors": "*",
+    "jsonwebtoken": "*",
+    "body-parser": "*",
+    "passport-jwt": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewvolk/user-auth-node-app.git"
+  },
+  "author": "Matthew Volk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthewvolk/user-auth-node-app/issues"
+  },
+  "homepage": "https://github.com/matthewvolk/user-auth-node-app#readme"
+}
