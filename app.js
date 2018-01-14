@@ -5,6 +5,20 @@ const bodyParser  = require('body-parser');
 const cors        = require('cors');
 const passport    = require('passport-jwt');
 const mongoose    = require('mongoose');
+const config      = require('./config/database');
+
+// connect to database
+mongoose.connect(config.database);
+
+// 'on' connection
+mongoose.connection.on('connected', () => {
+    console.log('VOLK: Connected to Database: '+config.database);
+});
+
+// 'on' connection
+mongoose.connection.on('error', (err) => {
+    console.log('VOLK: Database Error: '+err);
+});
 
 // initialize app variable
 const app         = express();
@@ -15,8 +29,11 @@ const users       = require('./routes/users')
 // initialize port variable
 const port        = 3000;
 
-// middleware
+// cors middleware
 app.use(cors());
+
+// set static folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 // body parser middleware
 app.use(bodyParser.json());
@@ -35,5 +52,5 @@ app.get('/', (req, res) => {
 
 // start server
 app.listen(port, () => {
-    console.log('server started on port ' +port);
+    console.log('VOLK: Server started on port: ' +port);
 });
