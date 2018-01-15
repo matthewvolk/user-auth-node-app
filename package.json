@@ -14,7 +14,8 @@
     "cors": "*",
     "jsonwebtoken": "*",
     "body-parser": "*",
-    "passport-jwt": "*"
+    "passport-jwt": "*",
+    "passport": "*"
   },
   "repository": {
     "type": "git",
