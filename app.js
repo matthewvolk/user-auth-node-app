@@ -47,7 +47,6 @@ require('./config/passport')(passport);
 // user routes
 app.use('/users', users);
 
-
 // index path
 app.get('/', (req, res) => {
     res.send('Invalid End Point');
