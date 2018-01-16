@@ -1,2 +1,14 @@
 # User Authentication Node Application 
-Part 5 from beginning
+
+##Endpoints
+```bash
+POST /users/register
+```
+
+```bash
+POST /users/authenticate   // Gives back a token
+```
+
+```bash
+GET /users/profile         // Needs json web token to authorize
+```
